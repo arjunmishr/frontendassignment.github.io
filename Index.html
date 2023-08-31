@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun:Assginment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.bg-footer
+{
+    background: url('./public/footer_bg.svg');
+    background-size: cover;
+    background-position: center;
+    height:70vh;
+}
+</style>
+<body>
+    <section>
+        <nav>
+            <div class="bg-[#1A1A1A] p-2 md:px-10 flex justify-between">
+                <div class="flex md:space-x-4">
+                    <div class="flex md:space-x-2 items-center">
+                    <img src="./public/bus.svg">
+                    <p class="text-[#626262] text-xs md:text-lg">Free Deliery</p>
+                    </div>
+                    <span class="text-[#626262] text-xs md:text-lg">|</span>
+                    <div><p class="text-[#626262] text-xs md:text-lg">Return Policy</p></div>
+                </div>
+                <div class="flex md:space-x-8 space-x-1">
+                    <a class="text-[#626262] text-xs md:text-lg">Login</a>
+                    <a class="text-[#626262] text-xs md:text-lg">Follow Us</a>
+                    <img src="./public/fbicon.svg">
+                    <img src="./public/linkicon.svg">
+                    <img src="./public/twticon.svg">
+                    <img src="./public/instaicon.svg">
+                </div>
+            </div>
+               <div class="bg-black ">
+                <div class="flex justify-between items-center w-[82%] mx-auto">
+                  <h1 class="text-white  text-4xl">ShopKart</h1>
+                  <div class="flex space-x-4">
+                    <p class="text-white font-bold">Wishlist(0)</p>
+                    <p class="text-white font-bold">Bag(0)</p>
+                  </div>
+                </div>
+                <div class="mx-auto flex justify-center">
+                    <img src="./public/navline.svg">
+                </div>
+               </div>
+               <div id="menulist" class="md:flex space-x-24 bg-black text-white h-10 px-24 text-xl hidden">
+                  
+               </div>
+            </nav>
+            <div class="bg-black">
+                <img src="./public/main-frame.svg">
+                <div class="absolute bottom-5 left-10 cursor-pointer ">
+                    <img src="./public/seemore.svg">
+                </div>
+            </div>
+    </section>
+    <section class="md:p-10 p-4">
+    <div class="flex md:justify-between items-center">
+        <div>
+            <p class="md:text-4xl text-2xl font-bold">New Products</p>
+               <img src="./public/line.svg" class="md:w-auto w-[50%]">
+        </div>
+        <div class="flex md:space-x-8 mr-24 space-x-4">
+            <img src="./public/arrow.svg" id="prev" class="cursor-pointer">
+            <img src="./public/arrow.svg" class="rotate-180 cursor-pointer" id="next">
+        </div>
+    </div>
+    <div class="flex md:flex-row  flex-col">
+        <div class=" mt-10  md:w-[15%] w-full">
+            <ul class="md:space-y-10 md:text-xl  text-md  space-x-4 md:space-x-0 flex flex-row md:flex-col">
+                <li>Apparel</li>
+                <li>Accessories</li>
+                <li>Best Seller</li>
+                <li>50% Off</li>
+            </ul>
+        </div>
+        <div class=" md:p-24 p-10 overflow-x-auto flex gap-x-24 md:w-[85%] scroll-smooth scrollbar-hide w-full" id="cardslider">
+
+        </div>
+    </div>
+        
+    </section>
+    <section>
+       <div class="bg-footer md:px-24 relative md:p-20 p-0">
+                        <div class="flex md:p-24 md:flex-row flex-col justify-between space-y-10 py-10 md:space-y-0 md:py-0">
+                            <div class="md:w-[20%] w-full  text-center md:text-justify">
+                                <p class="text-white">Newslleter</p>
+                                <p class="text-white">
+                                    Get news about articles and updates in your inbox.</p>
+                            </div>
+                            <div class="space-y-10">
+                                <div class="flex flex-col justify-center">
+                                    <div class="flex items-center">
+                                        <p class="text-white">Name</p>
+                                    <input type="text" class="bg-transparent no-outline">
+                                    </div>
+                                    <img src="./public/inputline.svg"> 
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <div class="flex items-center">
+                                        <p class="text-white">Email</p>
+                                    <input type="email" class="bg-transparent no-outline">
+                                    </div>
+                                    <img src="./public/inputline.svg"> 
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <div class="flex items-center">
+                                        <p class="text-white">Message</p>
+                                    <input type="text" class="bg-transparent no-outline">
+                                    </div>
+                                    <img src="./public/inputline.svg"> 
+                                </div>
+                            </div>
+                        </div>
+
+            <div>
+                <img src="./public/gint.svg">
+            </div>
+            <div class="absolute bottom-1 md:bottom-5 right-5 cursor-pointer">
+                <img src="./public/send.svg" class="w-16 h-16 md:h-24 md:w-24">
+            </div>
+       </div>
+    </section>
+    <section>
+        <div class="bg-black text-center p-5">
+            <p class="text-[#FFFFFF]">Copyright 2022 All Right Reserved By SG</p>
+        </div>
+    </section>
+</body>
+<script>
+    const navbar = [
+{ name: 'Home', id: 'home'},
+{ name: 'About', id: 'about' },
+{ name: 'Our Products', 
+  id: 'product', 
+  child: [
+{ name: 'Product 1', id: 'p1'},
+{ name: 'Product 2', id: 'p2' },
+{ name: 'Product 3', id: 'p3'},
+{ name: 'Product 4', id: 'p4' },
+] },
+{ name: 'Contact Us', id: 'contact'},
+]
+var flag =0 ;
+ const menulist = document.getElementById('menulist')
+   for(let i=0; i<navbar.length;i++)
+   {
+    const divElement = document.createElement('div');
+    if(navbar[i].id=='product')
+    {
+        divElement.innerHTML=`<p class='cursor-pointer'>${navbar[i].name}</>`
+        const list = document.createElement('div')
+        list.innerHTML=`<ul></<ul>`
+
+        const something = navbar[i].child.length
+        for(let j=0;j<something;j++)
+        {
+            const listElement = document.createElement('div');
+            listElement.innerHTML=`<ul class=' bg-black px-5 w-fit'>
+            <li>${navbar[i].child[j].name}</li>
+            </ul>
+            `
+            list.appendChild(listElement)
+           
+                
+        
+        }
+       
+        divElement.addEventListener('click',()=>{
+              if(flag==0)
+              {
+                divElement.appendChild(list)
+                divElement.style.border='2px solid white'
+                divElement.style.height='150px'
+                divElement.style.textDecorationLine='underline'
+                divElement.style.textDecorationColor='white'
+                flag=1;
+              }
+              else
+              {
+                divElement.removeChild(list)
+                divElement.style.border='0px solid white'
+                divElement.style.height='10px'
+                divElement.style.textDecorationColor='black'
+                flag=0;
+              }
+               
+            })
+   
+    }
+    else
+    {
+        divElement.innerHTML=`<p>${navbar[i].name}</>`
+    }
+    
+    menulist.appendChild(divElement);
+   }
+   
+  const cardslider = document.getElementById('cardslider')
+   // Make a request to the API
+fetch('https://fakestoreapi.com/products')
+  .then(response => response.json()) // Parse response as JSON
+  .then(data => {
+    // Store the data in a variable
+    
+    var apiData=data;
+    // Now you can work with the data stored in the 'apiData' variable
+     for(let i=0; i<apiData.length;i++)
+     {
+        const stringlength = apiData[i].description.length
+        var desc;
+        if(stringlength>100)
+        {
+             desc = apiData[i].description.slice(0,500)
+        }
+        const productElement = document.createElement('div')
+        productElement.innerHTML = `<div class='w-72 h-96 p-1 border-2 border-gray-800 flex-shrink-0'>
+                 <img src='${apiData[i].image}' class='h-24 w-24 mx-auto'>
+                 <p class='font-bold text-sm'>${apiData[i].title}</p>
+                 <p class='text-xs'>${desc}</p>
+                 <p class = 'text-xl font-bold'>${apiData[i].price}</p>
+            </div>`
+        cardslider.appendChild(productElement);
+     }
+
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+ 
+    document.getElementById('next').addEventListener('click',()=>
+    {
+         document.getElementById('cardslider').scrollLeft +=400;
+    })
+    document.getElementById('prev').addEventListener('click',()=>
+    {
+        document.getElementById('cardslider').scrollLeft -=400;
+    })
+    </script>
+</html>
